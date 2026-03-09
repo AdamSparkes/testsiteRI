@@ -272,12 +272,31 @@ nav a:hover {
 .system-section {
     padding: 80px 50px;
     background-color: #0f1e30;
+    background-image: url('../images/boat.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-top: 6px solid rgba(0, 0, 0, 0.6);
     color: #ffffff;
 }
 
 .system-section-inner {
     max-width: 1280px;
     margin: 0 auto;
+}
+
+.system-layout {
+    display: flex;
+    align-items: stretch;
+    gap: 24px;
+}
+
+.system-copy-box {
+    flex: 0 0 34%;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 24px;
 }
 
 .system-section h2 {
@@ -292,19 +311,24 @@ nav a:hover {
 }
 
 .system-map-wrap {
-    width: 100%;
-    overflow-x: auto;
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 12px;
-    background-color: rgba(0, 0, 0, 0.2);
-    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-left: 100px;
+    padding-top: 100px;
 }
 
 .system-map {
-    width: 100%;
-    min-width: 980px;
+    width: min(100%, 900px);
+    min-width: 0;
     height: auto;
     display: block;
+    margin: 0 auto;
 }
 
 .map-line {
@@ -330,14 +354,15 @@ nav a:hover {
 .product-node {
     fill: #44bcd1;
     stroke: #44bcd1;
-    transition: transform 0.2s ease, opacity 0.2s ease;
+    transition: transform 0.2s ease, opacity 0.2s ease, filter 0.2s ease;
     transform-origin: center;
 }
 
 .product-link:hover .product-node,
 .product-link:focus .product-node {
     opacity: 0.9;
-    transform: translateY(-1px);
+    transform: scale(1.04);
+    filter: brightness(1.08);
 }
 
 .node-label {
@@ -353,12 +378,35 @@ nav a:hover {
     text-anchor: middle;
 }
 
-.product-label {
-    fill: #000000;
-    font-size: 20px;
+.icon-placeholder {
+    fill: rgba(255, 255, 255, 0.08);
+    stroke: #44bcd1;
+    stroke-width: 2;
+    stroke-dasharray: 5 4;
+}
+
+.icon-placeholder-text {
+    fill: #d9e3ee;
+    font-size: 12px;
     font-weight: 700;
     text-anchor: middle;
     dominant-baseline: middle;
+    letter-spacing: 0.5px;
+}
+
+.product-icon-glyph {
+    fill: #000000;
+    font-size: 18px;
+    font-weight: 700;
+    text-anchor: middle;
+    dominant-baseline: middle;
+}
+
+.product-icon-name {
+    fill: #d9e3ee;
+    font-size: 14px;
+    font-weight: 600;
+    text-anchor: middle;
 }
 
 /* ==================== */
@@ -430,8 +478,17 @@ nav a:hover {
         padding: 60px 20px;
     }
 
+    .system-layout {
+        flex-direction: column;
+    }
+
+    .system-copy-box {
+        flex: 1 1 auto;
+    }
+
     .system-map {
-        min-width: 900px;
+        width: 100%;
+        min-width: 0;
     }
 
    

@@ -39,69 +39,93 @@
 
     <section id="products" class="system-section">
         <div class="system-section-inner">
-            <h2>Connected Radar Product Ecosystem</h2>
-            <p class="system-intro">Connect to existing radars, route data through a dedicated processing unit, and deploy the software modules your operations need.</p>
+            <div class="system-layout">
+                <div class="system-copy-box">
+                    <h2>Connected Radar Product Ecosystem</h2>
+                    <p class="system-intro">Connect to existing radars, route data through a dedicated processing unit, and deploy the software modules your operations need.</p>
+                    <p class="system-intro">Select any product icon in the diagram to jump to its page, and use the map to quickly understand how each module connects into the same radar workflow.</p>
+                </div>
 
-            <div class="system-map-wrap">
-                <svg class="system-map" viewBox="0 0 1200 620" role="img" aria-label="Radar to processing unit product map">
+                <div class="system-map-wrap">
+                <svg class="system-map" viewBox="0 0 1020 620" role="img" aria-label="Radar and vessel connected to processing unit with clickable product icons">
                     <defs>
                         <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
                             <polygon points="0 0, 10 3.5, 0 7" fill="#44bcd1"></polygon>
                         </marker>
                     </defs>
 
-                    <rect x="100" y="250" width="200" height="90" rx="14" class="node core-node"></rect>
-                    <text x="200" y="305" class="node-label">Radar</text>
+                    <rect id="radar-icon-slot" x="70" y="120" width="54" height="54" rx="8" class="icon-placeholder"></rect>
+                    <text x="97" y="153" class="icon-placeholder-text">ICON</text>
 
-                    <line x1="300" y1="295" x2="500" y2="295" class="map-line" marker-end="url(#arrowhead)"></line>
+                    <rect id="vessel-icon-slot" x="70" y="290" width="54" height="54" rx="8" class="icon-placeholder"></rect>
+                    <text x="97" y="323" class="icon-placeholder-text">ICON</text>
 
-                    <rect x="500" y="235" width="260" height="120" rx="14" class="node process-node"></rect>
-                    <text x="630" y="288" class="node-label">Processing Unit</text>
-                    <text x="630" y="318" class="node-sub">Rutter hardware + software runtime</text>
+                    <!-- Radar to Vessel stack connector -->
+                    <line x1="97" y1="174" x2="97" y2="290" class="map-line"></line>
+                    <!-- Radar/Vessel stack to Processing connector -->
+                    <line x1="97" y1="240" x2="443" y2="240" class="map-line" ></line>
 
-                    <line x1="760" y1="295" x2="850" y2="120" class="map-line" marker-end="url(#arrowhead)"></line>
-                    <line x1="760" y1="295" x2="850" y2="190" class="map-line" marker-end="url(#arrowhead)"></line>
-                    <line x1="760" y1="295" x2="850" y2="260" class="map-line" marker-end="url(#arrowhead)"></line>
-                    <line x1="760" y1="295" x2="850" y2="330" class="map-line" marker-end="url(#arrowhead)"></line>
-                    <line x1="760" y1="295" x2="850" y2="400" class="map-line" marker-end="url(#arrowhead)"></line>
-                    <line x1="760" y1="295" x2="850" y2="470" class="map-line" marker-end="url(#arrowhead)"></line>
-                    <line x1="760" y1="295" x2="850" y2="540" class="map-line" marker-end="url(#arrowhead)"></line>
+                    <rect id="processing-icon-slot" x="443" y="213" width="54" height="54" rx="8" class="icon-placeholder"></rect>
+                    <text x="470" y="246" class="icon-placeholder-text">ICON</text>
+
+                    <!-- Processing to Current Monitor -->
+                    <line x1="470" y1="213" x2="470" y2="112" class="map-line"></line>
+                    <!-- Processing to Ice Navigator -->
+                    <line x1="497" y1="224" x2="620" y2="130" class="map-line"></line>
+                    <!-- Processing to Oil Spill Detection -->
+                    <line x1="497" y1="240" x2="650" y2="240" class="map-line"></line>
+                    <!-- Processing to Small Target Surveillance -->
+                    <line x1="497" y1="256" x2="620" y2="350" class="map-line"></line>
+                    <!-- Processing to WaMoS -->
+                    <line x1="470" y1="267" x2="470" y2="362" class="map-line"></line>
+                    <!-- Processing to Unify -->
+                    <line x1="443" y1="224" x2="320" y2="130" class="map-line"></line>
+                    <!-- Processing to Wave Signal -->
+                    <line x1="443" y1="256" x2="320" y2="350" class="map-line"></line>
 
                     <a href="products/current-monitor.html" class="product-link">
-                        <rect x="850" y="85" width="270" height="52" rx="10" class="node product-node"></rect>
-                        <text x="985" y="117" class="product-label">Current Monitor</text>
+                        <circle cx="470" cy="70" r="40" class="node product-node"></circle>
+                        <text x="470" y="77" class="product-icon-glyph">CM</text>
+                        <text x="470" y="126" class="product-icon-name">Current Monitor</text>
                     </a>
 
                     <a href="products/ice-navigator.html" class="product-link">
-                        <rect x="850" y="155" width="270" height="52" rx="10" class="node product-node"></rect>
-                        <text x="985" y="187" class="product-label">Ice Navigator</text>
+                        <circle cx="620" cy="130" r="40" class="node product-node"></circle>
+                        <text x="620" y="137" class="product-icon-glyph">IN</text>
+                        <text x="620" y="186" class="product-icon-name">Ice Navigator</text>
                     </a>
 
                     <a href="products/oil-spill-detection.html" class="product-link">
-                        <rect x="850" y="225" width="270" height="52" rx="10" class="node product-node"></rect>
-                        <text x="985" y="257" class="product-label">Oil Spill Detection</text>
+                        <circle cx="670" cy="240" r="40" class="node product-node"></circle>
+                        <text x="670" y="247" class="product-icon-glyph">OS</text>
+                        <text x="670" y="296" class="product-icon-name">Oil Spill Detection</text>
                     </a>
 
                     <a href="products/small-target-surveillance.html" class="product-link">
-                        <rect x="850" y="295" width="270" height="52" rx="10" class="node product-node"></rect>
-                        <text x="985" y="327" class="product-label">Small Target Surveillance</text>
+                        <circle cx="620" cy="350" r="40" class="node product-node"></circle>
+                        <text x="620" y="357" class="product-icon-glyph">ST</text>
+                        <text x="620" y="406" class="product-icon-name">Small Target Surveillance</text>
                     </a>
 
                     <a href="products/wamos.html" class="product-link">
-                        <rect x="850" y="365" width="270" height="52" rx="10" class="node product-node"></rect>
-                        <text x="985" y="397" class="product-label">WaMoS</text>
+                        <circle cx="470" cy="410" r="40" class="node product-node"></circle>
+                        <text x="470" y="417" class="product-icon-glyph">WM</text>
+                        <text x="470" y="466" class="product-icon-name">WaMoS</text>
                     </a>
 
                     <a href="products/wave-signal.html" class="product-link">
-                        <rect x="850" y="435" width="270" height="52" rx="10" class="node product-node"></rect>
-                        <text x="985" y="467" class="product-label">Wave Signal</text>
+                        <circle cx="320" cy="350" r="40" class="node product-node"></circle>
+                        <text x="320" y="357" class="product-icon-glyph">WS</text>
+                        <text x="320" y="406" class="product-icon-name">Wave Signal</text>
                     </a>
 
                     <a href="products/unify.html" class="product-link">
-                        <rect x="850" y="505" width="270" height="52" rx="10" class="node product-node"></rect>
-                        <text x="985" y="537" class="product-label">Unify</text>
+                        <circle cx="320" cy="130" r="40" class="node product-node"></circle>
+                        <text x="320" y="137" class="product-icon-glyph">UF</text>
+                        <text x="320" y="186" class="product-icon-name">Unify</text>
                     </a>
                 </svg>
+            </div>
             </div>
         </div>
     </section>
