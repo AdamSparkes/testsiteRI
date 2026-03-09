@@ -157,7 +157,7 @@ input:focus, textarea:focus, select:focus {
 /* ==================== */
 /* Navigation */
 /* ==================== */
-nav {
+.main-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -171,19 +171,19 @@ nav {
     box-shadow: var(--shadow);
 }
 
-nav .logo {
+.main-nav .logo {
     font-size: 24px;
     font-weight: 700;
     color: #ffffff;
 }
 
-nav .logo-img {
+.main-nav .logo-img {
     height: 70px;
     width: auto;
     display: block;
 }
 
-nav ul {
+.main-nav ul {
     display: flex;
     align-items: center;
     gap: 32px;
@@ -192,17 +192,17 @@ nav ul {
     padding: 0;
 }
 
-nav li {
+.main-nav li {
     margin: 0;
 }
 
-nav a {
+.main-nav a {
     color: #ffffff;
     text-decoration: none;
     font-weight: 500;
 }
 
-nav a:hover {
+.main-nav a:hover {
     color: #e6e6e6;
     text-decoration: none;
 }
@@ -599,6 +599,95 @@ nav a:hover {
 }
 
 /* ==================== */
+/* Footer Contact */
+/* ==================== */
+.site-footer {
+    background-color: #0b1624;
+    padding: 48px 50px;
+    color: #e0e9f3;
+}
+
+.site-footer-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer-contact {
+    flex: 1;
+}
+
+.footer-brand-logo {
+    height: 44px;
+    width: auto;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.footer-contact h3 {
+    color: #ffffff;
+    margin-bottom: 16px;
+}
+
+.footer-addresses {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-address {
+    flex: 1;
+}
+
+.footer-block {
+    margin-bottom: 16px;
+}
+
+.footer-block h4,
+.footer-nav-column h4 {
+    color: #ffffff;
+    margin-bottom: 6px;
+    font-size: 16px;
+}
+
+.footer-block p {
+    margin-bottom: 6px;
+    color: #c4d4e3;
+}
+
+.footer-block a,
+.footer-nav-column a {
+    color: #c4d4e3;
+    text-decoration: none;
+}
+
+.footer-block a:hover,
+.footer-nav-column a:hover {
+    color: #44bcd1;
+    text-decoration: none;
+}
+
+.footer-nav-wrap {
+    display: flex;
+    gap: 36px;
+}
+
+.footer-nav-column {
+    min-width: 220px;
+}
+
+.footer-nav-column ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-nav-column li {
+    margin-bottom: 8px;
+}
+
+/* ==================== */
 /* Utility Classes */
 /* ==================== */
 .text-center {
@@ -645,14 +734,14 @@ nav a:hover {
         font-size: 14px;
     }
 
-    nav {
+    .main-nav {
         padding: 16px 20px;
         flex-direction: column;
         align-items: flex-start;
         gap: 12px;
     }
 
-    nav ul {
+    .main-nav ul {
         gap: 16px;
         flex-wrap: wrap;
     }
@@ -694,6 +783,29 @@ nav a:hover {
     .system-map {
         width: 100%;
         min-width: 0;
+    }
+
+    .site-footer {
+        padding: 32px 20px;
+    }
+
+    .site-footer-inner {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .footer-brand-logo {
+        height: 36px;
+    }
+
+    .footer-addresses {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .footer-nav-wrap {
+        gap: 24px;
+        flex-wrap: wrap;
     }
 
    

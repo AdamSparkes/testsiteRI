@@ -1,6 +1,8 @@
 "use strict";
 
+// Newsletter carousel module
 (function () {
+	// DOM references
 	const cards = Array.from(document.querySelectorAll(".news-card"));
 	const prevButton = document.querySelector('[data-news-dir="prev"]');
 	const nextButton = document.querySelector('[data-news-dir="next"]');
@@ -12,10 +14,12 @@
 	const bodyElement = document.querySelector(".news-expanded-body");
 	const cardsPerPage = 4;
 
+	// Guard clause for missing newsletter elements
 	if (!cards.length || !prevButton || !nextButton || !newestButton || !titleElement || !metaElement || !imageElement || !bodyElement) {
 		return;
 	}
 
+	// Module state
 	const totalPages = Math.ceil(cards.length / cardsPerPage);
 	let pageIndex = 0;
 	let activeIndex = Math.max(
@@ -23,6 +27,7 @@
 		0
 	);
 
+	// Ensure active item remains visible when page changes
 	const ensureActiveInPage = () => {
 		const pageStart = pageIndex * cardsPerPage;
 		const pageEnd = pageStart + cardsPerPage;
@@ -31,6 +36,7 @@
 		}
 	};
 
+	// Render current page and page indicator
 	const renderPage = () => {
 		const pageStart = pageIndex * cardsPerPage;
 		const pageEnd = pageStart + cardsPerPage;
@@ -45,6 +51,7 @@
 		}
 	};
 
+	// Activate a selected card and update expanded article content
 	const setActive = (index) => {
 		activeIndex = Math.max(0, Math.min(cards.length - 1, index));
 		pageIndex = Math.floor(activeIndex / cardsPerPage);
@@ -83,10 +90,12 @@
 		}
 	};
 
+	// Card click interactions
 	cards.forEach((card, index) => {
 		card.addEventListener("click", () => setActive(index));
 	});
 
+	// Paging controls
 	prevButton.addEventListener("click", () => {
 		pageIndex = pageIndex <= 0 ? totalPages - 1 : pageIndex - 1;
 		activeIndex = pageIndex * cardsPerPage;
@@ -104,5 +113,6 @@
 		setActive(0);
 	});
 
+	// Initial render
 	setActive(activeIndex);
 })();
