@@ -149,6 +149,7 @@
     align-items: flex-start;
     gap: 12px;
     padding: 32px;
+    padding-left: clamp(64px, 10vw, 180px);
 }
 
 .product-suite-logo {
@@ -443,10 +444,6 @@
     background-image: url('../images/IceNavHero.png');
 }
 
-.ice-navigator-page .product-hero-content {
-    padding-left: clamp(64px, 10vw, 180px);
-}
-
 .spec-table-wrap {
     overflow-x: auto;
 }
@@ -532,6 +529,100 @@
     background-color: rgba(8, 18, 30, 0.8);
 }
 
+.products-selector-page .page-hero {
+    margin-bottom: 22px;
+}
+
+.selector-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.selector-card {
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    gap: 14px;
+    align-items: start;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 12px;
+    padding: 14px;
+    background-color: rgba(8, 18, 30, 0.65);
+}
+
+.selector-grid .selector-card:last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: min(560px, 100%);
+}
+
+.selector-card-unify {
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-items: center;
+    background-color: #ffffff;
+    border-color: #ffffff;
+}
+
+.unify-title-link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.unify-title-logo {
+    width: min(210px, 100%);
+    height: auto;
+    display: block;
+}
+
+.selector-card-unify .selector-copy p {
+    max-width: 480px;
+    margin: 0 auto;
+    color: #111111;
+}
+
+.selector-icon-link {
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    border: 1px solid rgba(68, 188, 209, 0.9);
+    color: #44bcd1;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    letter-spacing: 1px;
+    background-color: #ffffff;
+}
+
+.selector-icon-link:hover {
+    color: #0f3040;
+    border-color: #6de2f6;
+    background-color: #f2fdff;
+}
+
+.selector-icon-img {
+    width: 78%;
+    height: 78%;
+    object-fit: contain;
+    display: block;
+}
+
+.selector-copy h2 {
+    margin: 0 0 6px;
+    color: #ffffff;
+    font-size: 22px;
+}
+
+.selector-copy p {
+    margin: 0;
+    color: #d2dfec;
+}
+
 @media (max-width: 900px) {
     .product-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -556,6 +647,10 @@
     }
 
     .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .selector-grid {
         grid-template-columns: 1fr;
     }
 
