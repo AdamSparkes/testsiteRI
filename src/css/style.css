@@ -272,6 +272,29 @@ input:focus, textarea:focus, select:focus {
     gap: 40px;
 }
 
+.hero-kicker {
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    font-size: 12px;
+    color: #8ed9e8;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    color: #ffffff;
+    margin-bottom: 14px;
+    font-size: clamp(34px, 5vw, 62px);
+    line-height: 1;
+}
+
+.hero-main p {
+    max-width: 56ch;
+}
+
+.hero-main {
+    flex: 0 0 min(52%, 780px);
+}
+
 .content-box {
     flex: 1;
     display: flex;
@@ -312,6 +335,31 @@ input:focus, textarea:focus, select:focus {
     border-radius: 8px;
 }
 
+.cta-btn-primary {
+    background-color: #44bcd1;
+}
+
+.cta-btn-secondary {
+    background-color: rgba(255, 255, 255, 0.92);
+    color: #0d1a2a;
+}
+
+.cta-btn-secondary:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.cta-btn-text {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.34);
+    color: #d9edf7;
+}
+
+.cta-btn-text:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+}
+
 .cta-btn:hover {
     background-color: #00ffff;
     color: #000000;
@@ -326,6 +374,46 @@ input:focus, textarea:focus, select:focus {
     padding: 24px 50px;
 }
 
+.home-proof-strip {
+    padding: 30px 50px;
+    background-color: #102134;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.home-proof-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.proof-item {
+    padding: 8px 18px;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.proof-item:first-child {
+    border-left: none;
+    padding-left: 0;
+}
+
+.proof-item:last-child {
+    padding-right: 0;
+}
+
+.proof-item h3 {
+    color: #ffffff;
+    font-size: 19px;
+    margin-bottom: 8px;
+}
+
+.proof-item p {
+    color: #c8d8e8;
+    margin: 0;
+}
+
 .trusted-by-inner {
     max-width: 1280px;
     margin: 0 auto;
@@ -335,13 +423,17 @@ input:focus, textarea:focus, select:focus {
     color: #ffffff;
     font-size: 20px;
     margin-bottom: 14px;
+    text-align: center;
 }
 
 .trusted-marquee {
     overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 12px;
-    background-color: rgba(0, 0, 0, 0.4);
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
     padding: 14px 0;
 }
 
@@ -808,6 +900,35 @@ input:focus, textarea:focus, select:focus {
         padding: 60px 20px;
         min-height: 420px;
         flex-direction: column;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero-main {
+        flex: 1 1 auto;
+    }
+
+    .home-proof-strip {
+        padding: 24px 20px;
+    }
+
+    .home-proof-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .proof-item,
+    .proof-item:first-child,
+    .proof-item:last-child {
+        border-left: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.16);
+        padding: 14px 0 0;
+    }
+
+    .proof-item:first-child {
+        border-top: none;
+        padding-top: 0;
     }
 
     .system-section {
