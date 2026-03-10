@@ -444,6 +444,41 @@
     background-image: url('../images/IceNavHero.png');
 }
 
+.oil-spill-hero {
+    background-image: url('../images/OilHero.png');
+}
+
+/* Oil Spill Detection follows the same minimal, non-boxed layout style. */
+.oil-spill-page .product-section,
+.oil-spill-page .feature-card,
+.oil-spill-page .story-copy {
+    border: none;
+    background: transparent;
+    box-shadow: none;
+}
+
+.oil-spill-page .product-section {
+    padding: 18px 0;
+}
+
+.oil-spill-page .feature-card,
+.oil-spill-page .story-copy {
+    padding: 0;
+}
+
+.oil-spill-page .story-media,
+.oil-spill-page .product-image-break,
+.oil-spill-page .video-frame-wrap {
+    border: none;
+    background: transparent;
+}
+
+.oil-spill-page .product-feature-grid,
+.oil-spill-page .product-feature-grid-wide,
+.oil-spill-page .product-split {
+    gap: 20px;
+}
+
 .spec-table-wrap {
     overflow-x: auto;
 }

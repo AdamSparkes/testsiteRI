@@ -9,7 +9,197 @@
 </head>
 <body class="page-shell">
     <div data-component="header" data-base=".."></div>
-    <main class="page-main"></main>
+    <main class="page-main product-page oil-spill-page">
+        <section class="product-hero oil-spill-hero" aria-label="Oil Spill Detection hero">
+            <div class="product-hero-overlay"></div>
+            <div class="product-hero-content">
+                <img src="../images/OS6-Logo.png" alt="OS6 logo" class="product-suite-logo">
+                <h1>Oil Spill Detection</h1>
+                <p>Real-time radar-based spill detection and tracking for faster response, lower false alarms, and reduced environmental risk.</p>
+            </div>
+        </section>
+
+        <section class="product-section product-value" aria-label="Oil Spill Detection outcomes">
+            <h2>Why Oil Spill Detection</h2>
+            <div class="product-feature-grid">
+                <article class="feature-card">
+                    <h3>Fast, Automated Detection</h3>
+                    <p>Detects oil by monitoring ocean-surface disruptions from sheens and thicker layers, with detection achieved within 10 radar scans under ideal conditions.</p>
+                </article>
+                <article class="feature-card">
+                    <h3>Operational Flexibility</h3>
+                    <p>Supports auto-tuning using machine learning and manual tuning, plus full automatic detection/outlining or manual outlining workflows.</p>
+                </article>
+                <article class="feature-card">
+                    <h3>Proven, Integrated Platform</h3>
+                    <p>IEC 60945 certified, motion-compensated, NOFO tested, and built to integrate with existing X-band radar infrastructure.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="product-section product-story" aria-label="Oil Spill Detection system overview">
+            <div class="story-media">
+                <img src="../images/Oil1.png" alt="Oil Spill Detection interface view" class="story-image">
+            </div>
+            <div class="story-copy">
+                <h2>System Overview</h2>
+                <p class="story-highlight">Detect, track, and outline spills with minimal operator intervention.</p>
+                <p><strong>Oil Spill Detection</strong> connects to existing X-band radars to process data instantly and identify spill location and extent in real time.</p>
+                <p>It delivers accurate outlining and visible outline history to help teams understand spill movement and improve operational response decisions.</p>
+                <p>The interface is designed for ease of use, supports English and Portuguese, and integrates with FLIR camera systems for additional situational context.</p>
+            </div>
+        </section>
+
+        <section class="product-section" aria-label="Oil Spill Detection key features">
+            <h2>Key Features</h2>
+            <div class="product-feature-grid product-feature-grid-wide">
+                <article class="feature-card">
+                    <h3>Advanced Detection, Tracking and Outlining</h3>
+                    <ul>
+                        <li>Automated real-time detection with minimal intervention</li>
+                        <li>Low false alarm rate and shadow detection support</li>
+                        <li>Accurate outlining for spill location and size estimation</li>
+                    </ul>
+                </article>
+
+                <article class="feature-card">
+                    <h3>Radar Agnostic Integration</h3>
+                    <ul>
+                        <li>Compatible with most analog and digital radars</li>
+                        <li>No proprietary radar hardware requirement</li>
+                        <li>Reduces cost and space by using existing infrastructure</li>
+                    </ul>
+                </article>
+
+                <article class="feature-card">
+                    <h3>Map and Navigation Support</h3>
+                    <ul>
+                        <li>Garmin Navionics, including secure charts</li>
+                        <li>Shape file integration (for example lease block data)</li>
+                        <li>Open-source base map file support</li>
+                    </ul>
+                </article>
+
+                <article class="feature-card">
+                    <h3>Recording, Playback and Sharing</h3>
+                    <ul>
+                        <li>Capture on-screen or raw radar data</li>
+                        <li>Playback data as if live for training and analysis</li>
+                        <li>Share radar imagery and detected spills between vessels</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="product-section product-video-section" aria-label="Oil Spill Detection product video">
+            <div class="video-copy">
+                <h2>Video Walkthrough</h2>
+                <p>Use this section for spill detection demonstrations, alert workflows, and response coordination walkthroughs.</p>
+            </div>
+            <div class="video-frame-wrap">
+                <video class="product-video" controls preload="metadata" poster="../images/OilHero.png">
+                    <source src="../media/oil-spill-detection-overview.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video playback.
+                </video>
+            </div>
+        </section>
+
+        <section class="product-image-break" aria-label="Oil spill operations visual separator">
+            <img src="../images/OilBreak.png" alt="Oil spill radar visualization separator" class="image-break-asset">
+        </section>
+
+        <section class="product-section spec-section" aria-label="Oil Spill Detection technical specifications">
+            <h2>Technical Specifications</h2>
+            <div class="spec-table-wrap">
+                <table class="spec-table">
+                    <thead>
+                        <tr>
+                            <th>Specification</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Detection and Tracking</td>
+                            <td>Automatic detection, tracking and outlining (minimum 5L detected during controlled customer trial).</td>
+                        </tr>
+                        <tr>
+                            <td>Measured Oil Characteristics</td>
+                            <td><strong>Location:</strong> spill coordinates. <strong>Drift Vector:</strong> direction and speed of drift. <strong>Perimeter Length:</strong> perimeter of outlined spill. <strong>Spill Area:</strong> outlined surface area.</td>
+                        </tr>
+                        <tr>
+                            <td>Oil Volume Estimation</td>
+                            <td>Measured spill area combined with user-entered thickness and dampening segmentation to estimate oil volume.</td>
+                        </tr>
+                        <tr>
+                            <td>Detection Range</td>
+                            <td>Up to 4 nautical miles.</td>
+                        </tr>
+                        <tr>
+                            <td>FLIR IR Camera Integration</td>
+                            <td><strong>Multi-camera support:</strong> up to 4 cameras. <strong>Display integration:</strong> FLIR in SeaView. <strong>Manual control:</strong> user-selected FLIR models. <strong>Automatic tracking:</strong> camera directed to detected spills.</td>
+                        </tr>
+                        <tr>
+                            <td>Screen Recording</td>
+                            <td>Records operator screens for analysis, playback and training.</td>
+                        </tr>
+                        <tr>
+                            <td>Raw Data Recording</td>
+                            <td>Records raw radar data for later playback and live-system simulation.</td>
+                        </tr>
+                        <tr>
+                            <td>Geo-Location</td>
+                            <td>Up to <strong>64</strong> radar scans motion compensated and averaged for enhanced imaging.</td>
+                        </tr>
+                        <tr>
+                            <td>Navigation Charts</td>
+                            <td>Integrates with Garmin Navionics charts.</td>
+                        </tr>
+                        <tr>
+                            <td>AIS Integration</td>
+                            <td>AIS <strong>Class A</strong> and <strong>Class B</strong> support.</td>
+                        </tr>
+                        <tr>
+                            <td>Geo-Referenced Notes</td>
+                            <td>Geo-fixed notes viewable locally.</td>
+                        </tr>
+                        <tr>
+                            <td>Geo-Fixed and Relative Guard Zones</td>
+                            <td><strong>32</strong> zones with selectable include/exclude behavior for spill detection.</td>
+                        </tr>
+                        <tr>
+                            <td>Integrated Systems</td>
+                            <td>Runs with all Rutter systems on a single hardware platform: Oil Spill Detection, Small Target Surveillance, WaMoS, Current Monitor, WaveSignal and Ice Navigator.</td>
+                        </tr>
+                        <tr>
+                            <td>Rutter Unify</td>
+                            <td>Rutter Unify and external data interfaces supported.</td>
+                        </tr>
+                        <tr>
+                            <td>Shadow Detection</td>
+                            <td>Automatic exclusion of radar shadows from detection areas.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="product-section product-split" aria-label="Coverage and deployment">
+            <article class="feature-card">
+                <h3>Response-Ready Operations</h3>
+                <ul>
+                    <li>Real-time processing and analysis</li>
+                    <li>Operator workflow options for automatic and manual modes</li>
+                    <li>Low false alarm performance with shadow filtering</li>
+                </ul>
+            </article>
+
+            <article class="feature-card">
+                <h3>Multiple Applications, Single Radar Processor</h3>
+                <p>All sigma S6 modules can be deployed on a shared IEC 60945 Radar Data Processor to simplify hardware footprint and expand capability over time.</p>
+            </article>
+        </section>
+    </main>
     <div data-component="footer" data-base=".."></div>
 
     <script src="../js/components.js"></script>
