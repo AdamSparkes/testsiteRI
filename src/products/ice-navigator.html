@@ -9,7 +9,218 @@
 </head>
 <body class="page-shell">
     <div data-component="header" data-base=".."></div>
-    <main class="page-main"></main>
+    <main class="page-main product-page ice-navigator-page">
+        <section class="product-hero ice-navigator-hero" aria-label="Ice Navigator hero">
+            <div class="product-hero-overlay"></div>
+            <div class="product-hero-content">
+                <img src="../images/OS6-Logo.png" alt="OS6 logo" class="product-suite-logo">
+                <h1>Ice Navigator</h1>
+                <p>Advanced radar imaging and targeting designed for safer and more efficient ice operations in changing maritime conditions.</p>
+            </div>
+        </section>
+
+        <section class="product-section product-value" aria-label="Ice Navigator outcomes">
+            <h2>Why Ice Navigator</h2>
+            <div class="product-feature-grid">
+                <article class="feature-card">
+                    <h3>Enhanced Ice Awareness</h3>
+                    <p>Uses advanced algorithms to improve radar visualization of ice floes, hazards, and changing ice conditions at longer ranges.</p>
+                </article>
+                <article class="feature-card">
+                    <h3>Operational Safety and Efficiency</h3>
+                    <p>Built for ice management, icebreaking, adventure tourism, research, and port access with safety and environmental responsibility in mind.</p>
+                </article>
+                <article class="feature-card">
+                    <h3>Seamless Integration</h3>
+                    <p>Passively integrates with existing radar systems, supports dual-radar switching, and uses coastline mapping to reduce false positives near land.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="product-section product-story" aria-label="Ice Navigator system overview">
+            <div class="story-media">
+                <img src="../images/IceNav1.png" alt="Ice Navigator operational interface" class="story-image">
+            </div>
+            <div class="story-copy">
+                <h2>System Overview</h2>
+                <p class="story-highlight">Reliable detection and tracking for ice operations.</p>
+                <p><strong>Ice Navigator</strong> adds another layer of protection to overall ice management by enhancing detection at longer ranges and supporting up to 32 alarmed guard zones.</p>
+                <p>Dedicated targeting supports up to <strong>300 simultaneous tracks</strong>, including icebergs, bergy bits, and growlers, helping operators avoid dangerous and costly collisions.</p>
+                <p>Optional Sea Ice Drift Analysis provides visibility into ice-floe movement within radar range for improved situational understanding and planning.</p>
+            </div>
+        </section>
+
+        <section class="product-image-break" aria-label="Ice Navigator visual divider">
+            <img src="../images/Mid-Placeholder.png" alt="Ice operations visual separator" class="image-break-asset">
+        </section>
+
+        <section class="product-section" aria-label="Ice Navigator key features">
+            <h2>Key Features</h2>
+            <div class="product-feature-grid product-feature-grid-wide">
+                <article class="feature-card">
+                    <h3>Enhanced Imaging and Targeting</h3>
+                    <ul>
+                        <li>Reliable iceberg detection in pack ice</li>
+                        <li>Up to 300 simultaneous tracks</li>
+                        <li>Detection focus on icebergs, bergy bits, and growlers</li>
+                    </ul>
+                </article>
+
+                <article class="feature-card">
+                    <h3>Sea Ice Drift Analysis (Optional)</h3>
+                    <ul>
+                        <li>Visualizes movement of ice floes within radar range</li>
+                        <li>Helps operators anticipate drift and route impact</li>
+                        <li>Available for X-band radars</li>
+                    </ul>
+                </article>
+
+                <article class="feature-card">
+                    <h3>SeaFusion</h3>
+                    <ul>
+                        <li>Combines data from up to four onboard radars</li>
+                        <li>Supports obstruction avoidance and full 360-degree awareness</li>
+                    </ul>
+                </article>
+
+                <article class="feature-card">
+                    <h3>Remote Viewing and Control</h3>
+                    <ul>
+                        <li>Remote operation under low-bandwidth conditions</li>
+                        <li>Capture on-screen or raw radar data</li>
+                        <li>Playback recorded raw data as if live for training and analysis</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="product-section product-video-section" aria-label="Ice Navigator product video">
+            <div class="video-copy">
+                <h2>Video Walkthrough</h2>
+                <p>Use this section for operational walkthroughs, ice-target tracking demonstrations, or bridge-team training clips that explain workflow in context.</p>
+                <p class="video-note">Drop your MP4 into <code>src/media/ice-navigator-overview.mp4</code> to activate playback.</p>
+            </div>
+            <div class="video-frame-wrap">
+                <video class="product-video" controls preload="metadata" poster="../images/IceNavHero.png">
+                    <source src="../media/ice-navigator-overview.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video playback.
+                </video>
+            </div>
+        </section>
+
+        <section class="product-section spec-section" aria-label="Ice Navigator technical specifications">
+            <h2>Technical Specifications</h2>
+            <div class="spec-table-wrap">
+                <table class="spec-table">
+                    <thead>
+                        <tr>
+                            <th>Specification</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Automatic Ice Detection and Tracking</td>
+                            <td><strong>300</strong> simultaneous tracks</td>
+                        </tr>
+                        <tr>
+                            <td>Measured Ice Target Characteristics</td>
+                            <td><strong>Location:</strong> determines ice coordinates. <strong>Drift Vector:</strong> determines direction and speed of target drift.</td>
+                        </tr>
+                        <tr>
+                            <td>Sea Ice Drift Analysis (Optional)</td>
+                            <td>Displays drift vectors of multiple points in a pack to visualize drift and deformation.</td>
+                        </tr>
+                        <tr>
+                            <td>Detection Range</td>
+                            <td>Dependent on target and radar characteristics.</td>
+                        </tr>
+                        <tr>
+                            <td>FLIR IR Camera Integration</td>
+                            <td><strong>Multi-camera support:</strong> up to 4 cameras. <strong>Display integration:</strong> FLIR imagery in interface. <strong>Manual control:</strong> user-controlled models. <strong>Automatic tracking:</strong> camera directs to radar targets.</td>
+                        </tr>
+                        <tr>
+                            <td>Screen Recording</td>
+                            <td>Records operator screens for analysis, playback, and training.</td>
+                        </tr>
+                        <tr>
+                            <td>Raw Data Recording</td>
+                            <td>Records raw captured radar data for playback with training simulators.</td>
+                        </tr>
+                        <tr>
+                            <td>Geo-Location Averaging</td>
+                            <td>Up to <strong>128</strong> scans geo-located and averaged for enhanced imaging.</td>
+                        </tr>
+                        <tr>
+                            <td>Navigation Chart Support</td>
+                            <td>Integrates with Garmin Navionics.</td>
+                        </tr>
+                        <tr>
+                            <td>AIS Integration</td>
+                            <td>AIS <strong>Class A</strong> and <strong>Class B</strong> support.</td>
+                        </tr>
+                        <tr>
+                            <td>Geo-Referenced Notes</td>
+                            <td>Geo-fixed notes viewable locally.</td>
+                        </tr>
+                        <tr>
+                            <td>Geo-Fixed and Site Relative Guard/Exclusion Zones</td>
+                            <td><strong>32</strong> zones to tailor included or excluded areas.</td>
+                        </tr>
+                        <tr>
+                            <td>sigma S6 Integrated Systems</td>
+                            <td>Supports concurrent operation with Small Target Surveillance, WaMoS, Current Monitor, WaveSignal, and Oil Spill Detection.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="product-section product-split" aria-label="Coverage and platform deployment">
+            <article class="feature-card">
+                <h3>24/7 Coverage in Maritime Conditions</h3>
+                <ul>
+                    <li>Precipitation</li>
+                    <li>High wind and sea states</li>
+                    <li>Darkness or low visibility</li>
+                    <li>Fog</li>
+                </ul>
+            </article>
+
+            <article class="feature-card">
+                <h3>Multiple Applications, Single Radar Processor</h3>
+                <p>All sigma S6 products can be combined on one IEC 60945 Radar Data Processor, enabling modular growth without separate hardware stacks.</p>
+            </article>
+        </section>
+
+        <section class="product-section gallery-section" aria-label="Ice Navigator imagery">
+            <h2>Ice Navigation Views</h2>
+            <p class="gallery-intro">Temporary lorem copy is included to test layout and breakdown placement while final program content is unavailable.</p>
+            <div class="views-grid">
+                <article class="view-row">
+                    <div class="view-media">
+                        <img src="../images/IceNav1.png" alt="Ice Navigator display showing tracked ice edges" class="gallery-image">
+                    </div>
+                    <div class="view-copy">
+                        <h3>View 01: Targeted Ice Tracking</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere justo vitae lectus condimentum, non faucibus ipsum sollicitudin. Integer pharetra purus in justo luctus, in ultrices felis scelerisque.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et commodo risus. Morbi sed sapien id nibh tincidunt iaculis quis vitae lacus.</p>
+                    </div>
+                </article>
+
+                <article class="view-row">
+                    <div class="view-media">
+                        <img src="../images/IceNav2.png" alt="Ice Navigator radar view with targeting overlays" class="gallery-image">
+                    </div>
+                    <div class="view-copy">
+                        <h3>View 02: Operator Control Interface</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ac sodales turpis. Sed posuere tincidunt lectus, nec fringilla leo faucibus et. Duis non est nec purus iaculis efficitur.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas suscipit, augue at fermentum sodales, est orci feugiat eros, sed malesuada neque erat in nibh.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
     <div data-component="footer" data-base=".."></div>
 
     <script src="../js/components.js"></script>

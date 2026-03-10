@@ -117,14 +117,16 @@
 
 .product-page {
     max-width: 1280px;
+    padding-top: 0;
 }
 
 .product-hero {
     position: relative;
-    min-height: 620px;
-    border-radius: 16px;
+    min-height: 78vh;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
     overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.16);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -140,7 +142,7 @@
     position: relative;
     z-index: 1;
     height: 100%;
-    min-height: 620px;
+    min-height: 78vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -405,6 +407,131 @@
     gap: 20px;
 }
 
+/* Ice Navigator uses the same minimal, non-boxed layout style. */
+.ice-navigator-page .product-section,
+.ice-navigator-page .feature-card,
+.ice-navigator-page .story-copy {
+    border: none;
+    background: transparent;
+    box-shadow: none;
+}
+
+.ice-navigator-page .product-section {
+    padding: 18px 0;
+}
+
+.ice-navigator-page .feature-card,
+.ice-navigator-page .story-copy {
+    padding: 0;
+}
+
+.ice-navigator-page .story-media,
+.ice-navigator-page .product-image-break,
+.ice-navigator-page .video-frame-wrap,
+.ice-navigator-page .view-media {
+    border: none;
+    background: transparent;
+}
+
+.ice-navigator-page .product-feature-grid,
+.ice-navigator-page .product-feature-grid-wide,
+.ice-navigator-page .product-split {
+    gap: 20px;
+}
+
+.ice-navigator-hero {
+    background-image: url('../images/IceNavHero.png');
+}
+
+.ice-navigator-page .product-hero-content {
+    padding-left: clamp(64px, 10vw, 180px);
+}
+
+.spec-table-wrap {
+    overflow-x: auto;
+}
+
+.spec-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 720px;
+}
+
+.spec-table th,
+.spec-table td {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px 12px;
+    text-align: left;
+    vertical-align: top;
+    color: #d8e6f3;
+}
+
+.spec-table thead th {
+    color: #ffffff;
+    background-color: rgba(68, 188, 209, 0.18);
+}
+
+.spec-table tbody td:first-child {
+    width: 34%;
+    font-weight: 600;
+    color: #eef7ff;
+}
+
+.gallery-section {
+    padding-bottom: 8px;
+}
+
+.gallery-intro {
+    color: #b8cedf;
+    margin-bottom: 12px;
+}
+
+.views-grid {
+    display: grid;
+    gap: 22px;
+}
+
+.view-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    align-items: start;
+}
+
+.view-media {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.view-copy h3 {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.view-copy p {
+    margin-bottom: 10px;
+    color: #d5e3f0;
+}
+
+.view-copy p:last-child {
+    margin-bottom: 0;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.gallery-image {
+    display: block;
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    object-fit: cover;
+    background-color: rgba(8, 18, 30, 0.8);
+}
+
 @media (max-width: 900px) {
     .product-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -427,6 +554,14 @@
     .story-media {
         min-height: 320px;
     }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .view-row {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 768px) {
@@ -436,7 +571,7 @@
 
     .product-hero,
     .product-hero-content {
-        min-height: 480px;
+        min-height: 64vh;
     }
 
     .product-hero-content {
@@ -445,6 +580,10 @@
 
     .product-grid {
         grid-template-columns: 1fr;
+    }
+
+    .product-page {
+        padding-top: 0;
     }
 
     .product-feature-grid,
