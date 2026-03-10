@@ -207,6 +207,58 @@ input:focus, textarea:focus, select:focus {
     text-decoration: none;
 }
 
+.main-nav .main-nav-list {
+    position: relative;
+}
+
+.main-nav a.is-current {
+    color: #44bcd1;
+}
+
+.nav-products {
+    position: relative;
+}
+
+.main-nav .products-dropdown {
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 0;
+    min-width: 250px;
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    margin: 0;
+    padding: 8px;
+    list-style: none;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    background-color: rgba(4, 10, 18, 0.94);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+}
+
+.main-nav .products-dropdown li {
+    margin: 0;
+}
+
+.main-nav .products-dropdown a {
+    display: block;
+    padding: 10px 12px;
+    border-radius: 8px;
+    color: #e6eef6;
+    font-weight: 500;
+}
+
+.main-nav .products-dropdown a:hover {
+    background-color: rgba(68, 188, 209, 0.18);
+    color: #ffffff;
+}
+
+.main-nav .nav-products:hover > .products-dropdown,
+.main-nav .nav-products:focus-within > .products-dropdown,
+.main-nav .nav-products.is-open > .products-dropdown {
+    display: flex;
+}
+
 /* ==================== */
 /* Hero Section */
 /* ==================== */
@@ -744,6 +796,12 @@ input:focus, textarea:focus, select:focus {
     .main-nav ul {
         gap: 16px;
         flex-wrap: wrap;
+    }
+
+    .products-dropdown {
+        position: static;
+        min-width: 100%;
+        margin-top: 6px;
     }
 
     .hero {

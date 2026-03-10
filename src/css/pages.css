@@ -1,0 +1,132 @@
+/* Shared styles for internal pages and product detail pages */
+.page-shell {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #13253a 0%, #0b1624 100%);
+    color: #e0e9f3;
+}
+
+.page-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 140px 24px 64px;
+}
+
+.page-hero {
+    margin-bottom: 28px;
+}
+
+.page-kicker {
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    font-size: 12px;
+    color: #44bcd1;
+    margin-bottom: 8px;
+}
+
+.page-hero h1 {
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.page-hero p {
+    max-width: 760px;
+    color: #c9d7e5;
+}
+
+.page-card {
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.35);
+    padding: 22px;
+    margin-bottom: 18px;
+}
+
+.page-card h2 {
+    color: #ffffff;
+}
+
+.page-card p,
+.page-card li {
+    color: #d7e3ee;
+}
+
+.breadcrumbs {
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.breadcrumbs a {
+    color: #9fdbe7;
+    text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+    color: #c8f4fb;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.product-tile {
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 12px;
+    background-color: rgba(10, 20, 34, 0.8);
+    padding: 16px;
+    text-decoration: none;
+    color: #e6eef6;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.product-tile:hover {
+    transform: translateY(-2px);
+    border-color: #44bcd1;
+    text-decoration: none;
+}
+
+.product-code {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    color: #44bcd1;
+    margin-bottom: 8px;
+}
+
+.quick-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.quick-links a {
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 8px 12px;
+    color: #d5e9f5;
+    text-decoration: none;
+}
+
+.quick-links a:hover {
+    color: #ffffff;
+    border-color: #44bcd1;
+}
+
+@media (max-width: 900px) {
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .page-main {
+        padding-top: 170px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}

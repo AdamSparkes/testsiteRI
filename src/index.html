@@ -7,19 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body id="top">
-    <!-- Navigation Bar -->
-    <nav class="main-nav">
-        <a href="#top" class="logo">
-            <img src="images/Rutter-Logo-(White-Text)-PNG.png" alt="Rutter Inc logo" class="logo-img">
-        </a>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#products">Products</a></li>
-            <li><a href="#industries">Industries</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <div data-component="header" data-base="."></div>
 
     <!-- Hero Section with Two Flexbox Containers -->
     <section class="hero">
@@ -28,8 +16,8 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente hic voluptatum exercitationem, fugit, quibusdam aliquam
                 dolorem nihildignissimos cumque magnam corporis fugiat laborum quidem eveniet asperiores sed harum qui! Voluptatum!</p>
             <div class="cta-buttons">
-                <a href="#contact" class="cta-btn">Contact</a>
-                <a href="#products" class="cta-btn">Products</a>
+                <a href="pages/contact.html" class="cta-btn">Contact</a>
+                <a href="pages/products.html" class="cta-btn">Products</a>
             </div>
         </div>
         <div class="content-box">
@@ -223,61 +211,9 @@
         </div>
     </section>
 
-    <footer id="contact" class="site-footer" aria-label="Contact and navigation">
-        <div class="site-footer-inner">
-            <div class="footer-contact">
-                <img src="images/Rutter-Horizontal-Logo-(White-Text)-PNG.png" alt="Rutter horizontal logo" class="footer-brand-logo">
-                <h3>Contact Us</h3>
+    <div data-component="footer" data-base="."></div>
 
-                <div class="footer-addresses">
-                    <div class="footer-block footer-address">
-                        <h4>Company Address</h4>
-                        <p>XXX-XXXX Waterfront Drive<br>Suite XXX<br>City, ST X0X 0X0</p>
-                    </div>
-
-                    <div class="footer-block footer-address">
-                        <h4>Subsidiary Address</h4>
-                        <p>XXX-XXXX Innovation Park Road<br>Unit XX<br>City, ST X0X 0X0</p>
-                    </div>
-                </div>
-
-                <div class="footer-block">
-                    <h4>Email</h4>
-                    <p><a href="mailto:sales@xxx-xxxx.com">sales@xxx-xxxx.com</a></p>
-                    <p><a href="mailto:support@xxx-xxxx.com">support@xxx-xxxx.com</a></p>
-                    <p><a href="mailto:general@xxx-xxxx.com">general@xxx-xxxx.com</a></p>
-                </div>
-            </div>
-
-            <div class="footer-nav-wrap">
-                <nav class="footer-nav-column" aria-label="Product suite links">
-                    <h4>Product Suite</h4>
-                    <ul>
-                        <li><a href="products/current-monitor.html">Current Monitor</a></li>
-                        <li><a href="products/ice-navigator.html">Ice Navigator</a></li>
-                        <li><a href="products/oil-spill-detection.html">Oil Spill Detection</a></li>
-                        <li><a href="products/small-target-surveillance.html">Small Target Surveillance</a></li>
-                        <li><a href="products/wamos.html">WaMoS</a></li>
-                        <li><a href="products/wave-signal.html">Wave Signal</a></li>
-                        <li><a href="products/unify.html">Unify</a></li>
-                    </ul>
-                </nav>
-
-                <nav class="footer-nav-column" aria-label="Site navigation links">
-                    <h4>Navigation</h4>
-                    <ul>
-                        <li><a href="#top">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#products">Products</a></li>
-                        <li><a href="#industries">Industries</a></li>
-                        <li><a href="#newsletter">Newsletter</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </footer>
-
+    <script src="js/components.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
