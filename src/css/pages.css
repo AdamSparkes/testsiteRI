@@ -192,6 +192,23 @@
     color: #ffffff;
 }
 
+.product-cta-secondary {
+    border-color: rgba(255, 255, 255, 0.42);
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.product-cta-secondary:hover {
+    border-color: #9cdde8;
+    background-color: rgba(255, 255, 255, 0.16);
+}
+
+.product-doc-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 14px;
+}
+
 .product-section {
     margin-top: 18px;
     border: 1px solid rgba(255, 255, 255, 0.14);
@@ -283,9 +300,12 @@
 
 .product-image-break {
     margin-top: 18px;
-    border-radius: 14px;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    border: none;
+    border-radius: 0;
     overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.14);
 }
 
 .image-break-asset {
@@ -446,6 +466,82 @@
 
 .oil-spill-hero {
     background-image: url('../images/OilHero.png');
+}
+
+.wave-signal-hero {
+    background-image: url('../images/WaveSigHero.png');
+}
+
+.wamos-hero {
+    background-image: url('../images/WaMoSHero.png');
+}
+
+/* Wave Signal uses the same minimal, non-boxed layout style. */
+.wave-signal-page .product-section,
+.wave-signal-page .feature-card,
+.wave-signal-page .story-copy,
+.wave-signal-page .included-copy {
+    border: none;
+    background: transparent;
+    box-shadow: none;
+}
+
+.wave-signal-page .product-section {
+    padding: 18px 0;
+}
+
+.wave-signal-page .feature-card,
+.wave-signal-page .story-copy,
+.wave-signal-page .included-copy {
+    padding: 0;
+}
+
+.wave-signal-page .story-media,
+.wave-signal-page .included-media,
+.wave-signal-page .product-image-break,
+.wave-signal-page .video-frame-wrap {
+    border: none;
+    background: transparent;
+}
+
+.wave-signal-page .product-feature-grid,
+.wave-signal-page .product-feature-grid-wide,
+.wave-signal-page .product-split {
+    gap: 20px;
+}
+
+/* WaMoS uses the same minimal, non-boxed layout style. */
+.wamos-page .product-section,
+.wamos-page .feature-card,
+.wamos-page .story-copy,
+.wamos-page .included-copy {
+    border: none;
+    background: transparent;
+    box-shadow: none;
+}
+
+.wamos-page .product-section {
+    padding: 18px 0;
+}
+
+.wamos-page .feature-card,
+.wamos-page .story-copy,
+.wamos-page .included-copy {
+    padding: 0;
+}
+
+.wamos-page .story-media,
+.wamos-page .included-media,
+.wamos-page .product-image-break,
+.wamos-page .video-frame-wrap {
+    border: none;
+    background: transparent;
+}
+
+.wamos-page .product-feature-grid,
+.wamos-page .product-feature-grid-wide,
+.wamos-page .product-split {
+    gap: 20px;
 }
 
 /* Oil Spill Detection follows the same minimal, non-boxed layout style. */

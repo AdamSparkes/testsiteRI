@@ -9,17 +9,146 @@
 </head>
 <body class="page-shell">
     <div data-component="header" data-base=".."></div>
-    <main class="page-main product-page">
+    <main class="page-main product-page wamos-page">
+        <section class="product-hero wamos-hero" aria-label="WaMoS hero">
+            <div class="product-hero-overlay"></div>
+            <div class="product-hero-content">
+                <img src="../images/OS6-Logo.png" alt="OS6 logo" class="product-suite-logo">
+                <h1>WaMoS&reg; II</h1>
+                <p>X-band radar system delivering real-time ocean measurements while a vessel is underway or holding station for safer, more efficient offshore operations.</p>
+                <div class="product-doc-actions" aria-label="WaMoS documents">
+                    <a class="product-cta" href="#">Brochure</a>
+                    <a class="product-cta product-cta-secondary" href="#technical-specifications">Tech Specs</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="product-section product-value" aria-label="WaMoS outcomes">
+            <h2>What WaMoS&reg; II Delivers</h2>
+            <div class="product-feature-grid">
+                <article class="feature-card">
+                    <h3>Real-Time Environmental Intelligence</h3>
+                    <p>Delivers critical wave and current data with wave-field imagery, numerical measurements, and graphical reports to support go/no-go decisions.</p>
+                </article>
+                <article class="feature-card">
+                    <h3>Advanced Sea-State Differentiation</h3>
+                    <p>Differentiates peak waves, wind sea, and up to three distinct swell systems so operators can better assess risk and safe operating windows.</p>
+                </article>
+                <article class="feature-card">
+                    <h3>Certified, Scalable Platform</h3>
+                    <p>DNV and IEC 60945 certified with customizable views and optional high-resolution surface current grids through sigma S6 Current Monitor.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="product-section product-story" aria-label="WaMoS system overview">
+            <div class="story-media">
+                <img src="../images/WaMoSUI.png" alt="WaMoS interface showing wave and current measurements" class="story-image">
+            </div>
+            <div class="story-copy">
+                <h2>System Overview</h2>
+                <p class="story-highlight">Real-time, accurate, and cost effective measurement from marine radar.</p>
+                <p><strong>WaMoS&reg; II</strong> is a proven radar-based wave and surface current measurement system. Connecting to most commercial X-band radars, it measures and reports key sea-state parameters including significant wave height, peak wave height, peak period, peak wavelength, surface current speed, and current direction.</p>
+                <p>The system helps operators assess environmental risk across multiple locations in radar view, identify safe operational windows, and plan offshore activity with greater confidence.</p>
+                <p>WaMoS&reg; II can run with a dedicated Rutter X-band radar or interface passively with other compatible marine radars. It is fully motion compensated and supports vessels underway as well as fixed platforms.</p>
+            </div>
+        </section>
+
+        <section class="product-section" aria-label="WaMoS key features">
+            <h2>Features</h2>
+            <div class="product-feature-grid product-feature-grid-wide">
+                <article class="feature-card">
+                    <h3>Wave and Current Measurement</h3>
+                    <ul>
+                        <li>Wave and surface current measurements without fixed sensors</li>
+                        <li>Data quality comparable to wave buoy measurements</li>
+                        <li>Covers up to 5 analysis areas</li>
+                        <li>Covers areas up to 4 km from the radar site</li>
+                    </ul>
+                </article>
+
+                <article class="feature-card">
+                    <h3>Rutter UnifyTM</h3>
+                    <ul>
+                        <li>Remote web access in a unified system view</li>
+                        <li>Data visibility from any internet-connected device</li>
+                        <li>Real-time 256-bit encrypted data transfer</li>
+                        <li>Multi-factor authentication for secure access</li>
+                    </ul>
+                </article>
+
+                <article class="feature-card">
+                    <h3>Data Recording</h3>
+                    <ul>
+                        <li>Capture on-screen or raw radar data</li>
+                        <li>Playback radar data as if live</li>
+                        <li>Supports training and in-depth analysis workflows</li>
+                    </ul>
+                </article>
+
+                <article class="feature-card">
+                    <h3>24/7 Coverage and Planning</h3>
+                    <ul>
+                        <li>Reliable performance across sea states and weather conditions</li>
+                        <li>Supports real-time route planning and decision making</li>
+                        <li>Helps crews identify safer operational windows</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="product-image-break" aria-label="WaMoS visual divider">
+            <img src="../images/WaMoSBreak.png" alt="WaMoS operation visual separator" class="image-break-asset">
+        </section>
+
         <section class="product-section product-video-section" aria-label="WaMoS product video">
             <div class="video-copy">
                 <h2>Video Walkthrough</h2>
-                <p>Use this section for wave-monitoring demos, sea-state analytics overviews, and deployment walkthroughs.</p>
+                <p>Use this section for sea-state analytics demonstrations, route planning workflows, and offshore operational timing examples.</p>
             </div>
             <div class="video-frame-wrap">
-                <video class="product-video" controls preload="metadata" poster="../images/NewPlaceholder.jpg">
+                <video class="product-video" controls preload="metadata" poster="../images/WaMoSHero.png">
                     <source src="../media/wamos-overview.mp4" type="video/mp4">
                     Your browser does not support HTML5 video playback.
                 </video>
+            </div>
+        </section>
+
+        <section class="product-section product-split" aria-label="WaMoS deployment and integration">
+            <article class="feature-card">
+                <h3>Multiple Applications, Single Radar Processor</h3>
+                <p>All sigma S6 products can be combined on one IEC 60945 Radar Data Processor, simplifying deployment and enabling modular capability growth.</p>
+            </article>
+
+            <article class="feature-card" id="technical-specifications">
+                <h3>Technical Highlights</h3>
+                <ul>
+                    <li>X-band radar-based measurements while underway or on station</li>
+                    <li>Customizable views and configurable reporting outputs</li>
+                    <li>Optional high-resolution surface current grids via Current Monitor</li>
+                    <li>DNV and IEC 60945 certified solution</li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="product-section included-section" aria-label="WaMoS package contents">
+            <div class="included-media">
+                <img src="../images/Bottom-Placeholder.png" alt="WaMoS package components visual" class="included-image">
+            </div>
+            <div class="included-copy">
+                <h2>What Is Included</h2>
+                <p class="included-subhead">sigma S6 WaMoS&reg; II package:</p>
+                <ul>
+                    <li>Marine Certified Hardware (IEC 60945 Ed. 4, 2002-08)</li>
+                    <li>Rutter Radar Data Processor (desktop or rack mountable)</li>
+                    <li>24-inch marine certified rack mountable or desktop monitor (alternate sizes available)</li>
+                    <li>Trackball unit (desktop or console mountable)</li>
+                    <li>sigma S6 Radar Processing and SeaView display software</li>
+                    <li>Automatic screen recording with selectable intervals for evidence documentation</li>
+                    <li>Remote client capability</li>
+                    <li>Computer-Based Training (CBT) package</li>
+                    <li>sigma S6 Connect</li>
+                </ul>
             </div>
         </section>
     </main>
