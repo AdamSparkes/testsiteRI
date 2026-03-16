@@ -61,16 +61,15 @@
         const viewH  = window.innerHeight;
         const tlH    = timeline.offsetHeight;
 
-        // progress: 0 when timeline top reaches bottom of viewport,
-        //           1 when timeline bottom reaches top of viewport.
-        const progress = Math.max(0, Math.min(1,
-            (viewH - tlRect.top) / (viewH + tlH)
-        ));
-
-        const drawnPx = progress * tlH;
+        // Anchor the spine tip to 70% down the viewport.
+        // drawnPx = 0 when that anchor first touches the timeline top,
+        // and grows to tlH as the anchor sweeps through the full timeline.
+        // This means the glowing tip is always visible on screen while scrolling.
+        const anchorY = viewH * 0.7;
+        const drawnPx = Math.max(0, Math.min(tlH, anchorY - tlRect.top));
         spine.style.height = drawnPx + "px";
 
-        // Activate each item once the drawn spine passes its node (top + 22px).
+        // Items activate when the spine tip reaches their node.
         items.forEach((item) => {
             if (item.classList.contains("is-active")) return;
             const nodeTop = item.offsetTop + 22;
