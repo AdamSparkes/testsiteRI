@@ -83,3 +83,5 @@
     window.addEventListener("resize", update, { passive: true });
     update(); // run once on load in case timeline is already in view
 })();
+
+// god I hope there's a way to auto do this in Wordpress.
