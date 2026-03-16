@@ -476,6 +476,10 @@
     background-image: url('../images/WaMoSHero.png');
 }
 
+.small-target-surveillance-hero {
+    background-image: url('../images/STTHero.png');
+}
+
 /* Wave Signal uses the same minimal, non-boxed layout style. */
 .wave-signal-page .product-section,
 .wave-signal-page .feature-card,
