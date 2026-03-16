@@ -51,7 +51,7 @@
 
             <div class="footer-addresses">
                 <div class="footer-block footer-address">
-                    <h4>Company Address</h4>ytu
+                    <h4>Company Address</h4>
                     <p>XXX-XXXX Waterfront Drive<br>Suite XXX<br>City, ST X0X 0X0</p>
                 </div>
 
