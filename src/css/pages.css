@@ -940,3 +940,129 @@
         grid-column: 1;
     }
 }
+
+/* Contact page */
+.contact-page {
+    max-width: 1180px;
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 16px;
+    align-items: start;
+}
+
+.contact-routing h2,
+.contact-form-wrap h2 {
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.contact-routing p {
+    color: #c9d8e6;
+}
+
+.contact-purpose-picker {
+    margin-top: 14px;
+    display: grid;
+    gap: 8px;
+}
+
+.contact-purpose-btn {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    background-color: rgba(7, 16, 28, 0.75);
+    color: #d9e7f4;
+    padding: 10px 12px;
+    text-align: left;
+    font-weight: 600;
+    cursor: pointer;
+    transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+}
+
+.contact-purpose-btn:hover {
+    border-color: #44bcd1;
+    transform: translateY(-1px);
+}
+
+.contact-purpose-btn.is-active {
+    border-color: #44bcd1;
+    background-color: rgba(68, 188, 209, 0.2);
+    color: #effbff;
+}
+
+.contact-direct-list {
+    margin-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+    padding-top: 12px;
+}
+
+.contact-direct-list p {
+    margin-bottom: 8px;
+}
+
+.contact-direct-list a {
+    color: #b6e7f1;
+    text-decoration: none;
+}
+
+.contact-direct-list a:hover {
+    color: #e8fbff;
+}
+
+.contact-form {
+    display: grid;
+    gap: 12px;
+}
+
+.form-row {
+    display: grid;
+    gap: 6px;
+}
+
+.form-row label,
+.purpose-panel legend {
+    color: #f2f8ff;
+    font-weight: 600;
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    background-color: rgba(6, 14, 24, 0.8);
+    color: #e8f3fc;
+    padding: 10px 12px;
+}
+
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus {
+    outline: none;
+    border-color: #44bcd1;
+    box-shadow: 0 0 0 3px rgba(68, 188, 209, 0.22);
+}
+
+.form-row textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.purpose-panel {
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 10px;
+    padding: 12px;
+    margin: 0;
+}
+
+.contact-form-actions {
+    margin-top: 4px;
+}
+
+@media (max-width: 900px) {
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+}

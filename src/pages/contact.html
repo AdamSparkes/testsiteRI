@@ -10,10 +10,134 @@
 <body class="page-shell">
     <div data-component="header" data-base=".."></div>
 
-    <main class="page-main"></main>
+    <main class="page-main contact-page">
+        <section class="page-hero">
+            <p class="page-kicker">Contact</p>
+            <h1>How Can We Help?</h1>
+            <p>Select the reason for reaching out so your message routes to the right team. You can also email each team directly.</p>
+        </section>
+
+        <section class="contact-layout" aria-label="Contact options and form">
+            <aside class="page-card contact-routing" aria-label="Contact routing options">
+                <h2>Choose a Contact Purpose</h2>
+                <p>Pick one option below. The form updates with fields relevant to that request type.</p>
+
+                <div class="contact-purpose-picker" role="tablist" aria-label="Contact purposes">
+                    <button type="button" class="contact-purpose-btn is-active" data-purpose-target="general" role="tab" aria-selected="true">General Inquiries</button>
+                    <button type="button" class="contact-purpose-btn" data-purpose-target="support" role="tab" aria-selected="false">Support</button>
+                    <button type="button" class="contact-purpose-btn" data-purpose-target="sales" role="tab" aria-selected="false">Sales</button>
+                </div>
+
+                <div class="contact-direct-list" aria-label="Direct email contacts">
+                    <p><strong>General Inquiries:</strong> <a href="mailto:general@xxx-xxxx.com">general@xxx-xxxx.com</a></p>
+                    <p><strong>Support:</strong> <a href="mailto:support@xxx-xxxx.com">support@xxx-xxxx.com</a></p>
+                    <p><strong>Sales:</strong> <a href="mailto:sales@xxx-xxxx.com">sales@xxx-xxxx.com</a></p>
+                </div>
+            </aside>
+
+            <section class="page-card contact-form-wrap" aria-label="Contact form">
+                <h2>Send a Message</h2>
+
+                <form id="contactForm" class="contact-form" action="#" method="post">
+                    <input type="hidden" name="purpose" id="contactPurpose" value="general">
+
+                    <div class="form-row">
+                        <label for="contactName">Name</label>
+                        <input type="text" id="contactName" name="name" autocomplete="name" required>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="contactEmail">Email Address</label>
+                        <input type="email" id="contactEmail" name="email" autocomplete="email" required>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="contactSubject">Subject</label>
+                        <input type="text" id="contactSubject" name="subject" placeholder="Tell us what you need" required>
+                    </div>
+
+                    <fieldset class="purpose-panel" data-purpose-panel="general">
+                        <legend>General Inquiry Details</legend>
+                        <div class="form-row">
+                            <label for="generalTopic">Topic</label>
+                            <select id="generalTopic" name="general_topic">
+                                <option value="">Select a topic</option>
+                                <option value="partnership">Partnership</option>
+                                <option value="media">Media Request</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="purpose-panel" data-purpose-panel="support" hidden>
+                        <legend>Support Details</legend>
+                        <div class="form-row">
+                            <label for="supportProduct">Product</label>
+                            <select id="supportProduct" name="support_product">
+                                <option value="">Select a product</option>
+                                <option value="current-monitor">Current Monitor</option>
+                                <option value="ice-navigator">Ice Navigator</option>
+                                <option value="oil-spill-detection">Oil Spill Detection</option>
+                                <option value="small-target-surveillance">Small Target Surveillance</option>
+                                <option value="wamos">WaMoS</option>
+                                <option value="wave-signal">Wave Signal</option>
+                                <option value="unify">Unify</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <label for="supportVersion">Software Version</label>
+                            <input type="text" id="supportVersion" name="support_version" placeholder="Example: v2.3.1">
+                        </div>
+                        <div class="form-row">
+                            <label for="supportSeverity">Severity</label>
+                            <select id="supportSeverity" name="support_severity">
+                                <option value="">Select severity</option>
+                                <option value="low">Low</option>
+                                <option value="medium">Medium</option>
+                                <option value="high">High</option>
+                                <option value="critical">Critical</option>
+                            </select>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="purpose-panel" data-purpose-panel="sales" hidden>
+                        <legend>Sales Details</legend>
+                        <div class="form-row">
+                            <label for="salesCompany">Company</label>
+                            <input type="text" id="salesCompany" name="sales_company" autocomplete="organization">
+                        </div>
+                        <div class="form-row">
+                            <label for="salesRegion">Region</label>
+                            <input type="text" id="salesRegion" name="sales_region" placeholder="Example: North Atlantic">
+                        </div>
+                        <div class="form-row">
+                            <label for="salesTimeline">Purchase Timeline</label>
+                            <select id="salesTimeline" name="sales_timeline">
+                                <option value="">Select a timeline</option>
+                                <option value="0-3">0 to 3 months</option>
+                                <option value="3-6">3 to 6 months</option>
+                                <option value="6-12">6 to 12 months</option>
+                                <option value="12-plus">12+ months</option>
+                            </select>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-row">
+                        <label for="contactMessage">Message</label>
+                        <textarea id="contactMessage" name="message" rows="6" placeholder="Share the details of your request" required></textarea>
+                    </div>
+
+                    <div class="contact-form-actions">
+                        <button type="submit" class="cta-btn cta-btn-primary">Submit Message</button>
+                    </div>
+                </form>
+            </section>
+        </section>
+    </main>
     <div data-component="footer" data-base=".."></div>
 
     <script src="../js/components.js"></script>
+    <script src="../js/contact.js"></script>
 </body>
 </html>
 
