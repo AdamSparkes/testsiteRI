@@ -665,7 +665,7 @@ input:focus, textarea:focus, select:focus {
 }
 
 .map-line {
-    stroke: #44bcd1;
+    stroke: #ffffff;
     stroke-width: 3;
     opacity: 0.9;
 }
@@ -691,11 +691,24 @@ input:focus, textarea:focus, select:focus {
     transform-origin: center;
 }
 
+.product-node-icon {
+    transition: transform 0.2s ease, opacity 0.2s ease, filter 0.2s ease;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
 .product-link:hover .product-node,
 .product-link:focus .product-node {
     opacity: 0.9;
     transform: scale(1.04);
     filter: brightness(1.08);
+}
+
+.product-link:hover .product-node-icon,
+.product-link:focus .product-node-icon {
+    opacity: 0.92;
+    transform: scale(1.5);
+    filter: brightness(1.1);
 }
 
 .node-label {
@@ -725,14 +738,6 @@ input:focus, textarea:focus, select:focus {
     text-anchor: middle;
     dominant-baseline: middle;
     letter-spacing: 0.5px;
-}
-
-.product-icon-glyph {
-    fill: #000000;
-    font-size: 18px;
-    font-weight: 700;
-    text-anchor: middle;
-    dominant-baseline: middle;
 }
 
 .product-icon-name {

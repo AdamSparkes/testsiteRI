@@ -72,31 +72,37 @@
                     <fieldset class="purpose-panel" data-purpose-panel="support" hidden>
                         <legend>Support Details</legend>
                         <div class="form-row">
-                            <label for="supportProduct">Product</label>
-                            <select id="supportProduct" name="support_product">
-                                <option value="">Select a product</option>
-                                <option value="current-monitor">Current Monitor</option>
-                                <option value="ice-navigator">Ice Navigator</option>
-                                <option value="oil-spill-detection">Oil Spill Detection</option>
-                                <option value="small-target-surveillance">Small Target Surveillance</option>
-                                <option value="wamos">WaMoS</option>
-                                <option value="wave-signal">Wave Signal</option>
-                                <option value="unify">Unify</option>
-                            </select>
-                        </div>
-                        <div class="form-row">
-                            <label for="supportVersion">Software Version</label>
-                            <input type="text" id="supportVersion" name="support_version" placeholder="Example: v2.3.1">
-                        </div>
-                        <div class="form-row">
-                            <label for="supportSeverity">Severity</label>
-                            <select id="supportSeverity" name="support_severity">
-                                <option value="">Select severity</option>
-                                <option value="low">Low</option>
-                                <option value="medium">Medium</option>
-                                <option value="high">High</option>
-                                <option value="critical">Critical</option>
-                            </select>
+                            <span class="form-label">Products</span>
+                            <div class="support-checkbox-grid" role="group" aria-label="Products needing support">
+                                <label class="checkbox-card" for="supportProductCurrentMonitor">
+                                    <input type="checkbox" id="supportProductCurrentMonitor" name="support_products" value="current-monitor">
+                                    <span>Current Monitor</span>
+                                </label>
+                                <label class="checkbox-card" for="supportProductIceNavigator">
+                                    <input type="checkbox" id="supportProductIceNavigator" name="support_products" value="ice-navigator">
+                                    <span>Ice Navigator</span>
+                                </label>
+                                <label class="checkbox-card" for="supportProductOilSpillDetection">
+                                    <input type="checkbox" id="supportProductOilSpillDetection" name="support_products" value="oil-spill-detection">
+                                    <span>Oil Spill Detection</span>
+                                </label>
+                                <label class="checkbox-card" for="supportProductSmallTargetSurveillance">
+                                    <input type="checkbox" id="supportProductSmallTargetSurveillance" name="support_products" value="small-target-surveillance">
+                                    <span>Small Target Surveillance</span>
+                                </label>
+                                <label class="checkbox-card" for="supportProductWaMoS">
+                                    <input type="checkbox" id="supportProductWaMoS" name="support_products" value="wamos">
+                                    <span>WaMoS</span>
+                                </label>
+                                <label class="checkbox-card" for="supportProductWaveSignal">
+                                    <input type="checkbox" id="supportProductWaveSignal" name="support_products" value="wave-signal">
+                                    <span>Wave Signal</span>
+                                </label>
+                                <label class="checkbox-card" for="supportProductUnify">
+                                    <input type="checkbox" id="supportProductUnify" name="support_products" value="unify">
+                                    <span>Unify</span>
+                                </label>
+                            </div>
                         </div>
                     </fieldset>
 
