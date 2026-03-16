@@ -1180,6 +1180,96 @@
 }
 
 /* ======================== */
+/* Leadership Section       */
+/* ======================== */
+
+.leadership-section {
+    padding: 72px 0 60px;
+}
+
+.leadership-section-inner {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.leadership-heading {
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.leadership-heading h2 {
+    color: #ffffff;
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.leadership-heading p {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 16px;
+    margin: 0;
+}
+
+.leadership-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.leadership-item {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 48px;
+    align-items: start;
+    padding: 48px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.leadership-item:last-child {
+    border-bottom: none;
+}
+
+.leadership-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+}
+
+.leadership-info {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.leadership-item h3 {
+    color: #ffffff;
+    font-size: 18px;
+    margin: 0 0 6px 0;
+    line-height: 1.3;
+}
+
+.leadership-title {
+    color: #44bcd1;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin: 0 0 14px 0;
+}
+
+.leadership-item p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+    line-height: 1.65;
+    margin: 0 0 11px 0;
+}
+
+.leadership-item p:last-child {
+    margin-bottom: 0;
+}
+
+/* ======================== */
 /* Timeline Section         */
 /* ======================== */
 
@@ -1438,6 +1528,13 @@
 
     .about-stats {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Leadership */
+    .leadership-item {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 32px 0;
     }
 }
 
