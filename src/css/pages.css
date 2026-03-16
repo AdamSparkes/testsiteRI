@@ -1012,7 +1012,437 @@
     .industries-hero-content {
         min-height: 54vh;
     }
+}
 
+/* ======================== */
+/* About Page               */
+/* ======================== */
+
+.about-page {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/* ---- About hero ---- */
+.about-hero {
+    position: relative;
+    min-height: 86vh;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    overflow: hidden;
+    background-image: url('../images/HeroBackground.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+}
+
+.about-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(7, 15, 25, 0.15) 0%,
+        rgba(7, 15, 25, 0.55) 55%,
+        rgba(7, 15, 25, 0.92) 100%
+    );
+}
+
+.about-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: 0 clamp(32px, 8vw, 140px) 72px;
+}
+
+.about-hero-content h1 {
+    color: #ffffff;
+    font-size: clamp(30px, 4.5vw, 58px);
+    line-height: 1.1;
+    margin-bottom: 18px;
+}
+
+.about-hero-content p {
+    color: #d0e3f0;
+    font-size: clamp(15px, 1.5vw, 18px);
+    line-height: 1.65;
+    margin: 0;
+    max-width: 640px;
+}
+
+/* ---- About intro section ---- */
+.about-intro {
+    padding: 80px 0 72px;
+}
+
+.about-intro-inner {
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.about-intro-lead {
+    max-width: 760px;
+    margin-bottom: 60px;
+}
+
+.about-intro-lead h2 {
+    color: #ffffff;
+    font-size: 28px;
+    margin-bottom: 18px;
+}
+
+.about-intro-lead p {
+    color: #b8cfe4;
+    font-size: 16px;
+    line-height: 1.75;
+    margin-bottom: 14px;
+}
+
+.about-intro-lead p:last-child {
+    margin-bottom: 0;
+}
+
+/* Pillar grid */
+.about-intro-pillars {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 60px;
+}
+
+.about-pillar {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 12px;
+    padding: 24px 26px;
+    transition: border-color 0.2s ease;
+}
+
+.about-pillar:hover {
+    border-color: rgba(68, 188, 209, 0.45);
+}
+
+.about-pillar-icon {
+    display: block;
+    color: #44bcd1;
+    font-size: 12px;
+    margin-bottom: 12px;
+    letter-spacing: 0.05em;
+}
+
+.about-pillar h3 {
+    color: #ffffff;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.about-pillar p {
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 14px;
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* Stats bar */
+.about-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.about-stat {
+    background: rgba(255, 255, 255, 0.04);
+    padding: 28px 20px;
+    text-align: center;
+}
+
+.about-stat-number {
+    display: block;
+    font-size: 40px;
+    font-weight: 700;
+    color: #44bcd1;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.about-stat-label {
+    display: block;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+/* ======================== */
+/* Timeline Section         */
+/* ======================== */
+
+.timeline-section {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    background: #0c1929;
+    padding: 80px 20px 100px;
+}
+
+.timeline-section-inner {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.timeline-heading-block {
+    text-align: center;
+    margin-bottom: 72px;
+}
+
+.timeline-heading-block h2 {
+    color: #ffffff;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.timeline-sub {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 16px;
+    margin: 0;
+}
+
+/* ---- Core timeline layout ---- */
+/*
+  Desktop layout (≥ 680px):
+    Left item:  [CARD] —branch(56px)— [NODE on spine at 50%]
+    Right item: [NODE on spine at 50%] —branch(56px)— [CARD]
+
+  Item width = calc(50% - 56px) so right edge (left) / left edge (right) sits 56px away from center spine.
+  Node is 14px wide; its centre lands exactly on the 50% spine line.
+  Branch width = 56px, transforms scaleX from the spine outward.
+*/
+
+.timeline {
+    position: relative;
+    padding: 24px 0 8px;
+}
+
+/* Ghost track — full height, very faint */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 2px;
+    pointer-events: none;
+}
+
+/* Animated spine wrapper — same position as ghost track */
+.timeline-spine-track {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    transform: translateX(-50%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* The element whose height JS drives */
+.timeline-spine {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(to bottom, #007bff, #44bcd1);
+    border-radius: 2px;
+}
+
+/* ---- Timeline item rows ---- */
+.timeline-item {
+    position: relative;
+    width: calc(50% - 56px);
+    margin-bottom: 60px;
+}
+
+/* Right-side items sit past the spine */
+.timeline-item.tl-right {
+    left: calc(50% + 56px);
+}
+
+/* ---- Node (dot on the spine) ---- */
+.timeline-node {
+    position: absolute;
+    top: 22px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #007bff;
+    border: 3px solid #0c1929;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.35);
+    z-index: 3;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 0.2s ease,
+                transform 0.38s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Left item: node left-edge = item-right + 49px  →  centre = item-right + 56px = spine */
+.tl-left .timeline-node {
+    left: calc(100% + 49px);
+}
+
+/* Right item: node right-edge = item-left − 49px  →  centre = item-left − 56px = spine  */
+.tl-right .timeline-node {
+    right: calc(100% + 49px);
+}
+
+/* ---- Branch line (horizontal connector) ---- */
+.timeline-branch {
+    position: absolute;
+    top: 28px;          /* vertically centred on the node */
+    width: 56px;
+    height: 2px;
+    z-index: 2;
+    transform: scaleX(0);
+    transition: transform 0.38s ease;
+}
+
+/* Left item: branch sits to the RIGHT of the card, grows from spine (right) toward card */
+.tl-left .timeline-branch {
+    left: 100%;
+    background: linear-gradient(to left, #007bff, #44bcd1);
+    transform-origin: right;
+}
+
+/* Right item: branch sits to the LEFT of the card, grows from spine (left) toward card */
+.tl-right .timeline-branch {
+    right: 100%;
+    background: linear-gradient(to right, #007bff, #44bcd1);
+    transform-origin: left;
+}
+
+/* ---- Info card ---- */
+.timeline-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 22px 26px;
+    opacity: 0;
+    transition: opacity 0.38s ease 0.36s,
+                transform 0.38s ease 0.36s;
+}
+
+.tl-left .timeline-card  { transform: translateX(-16px); }
+.tl-right .timeline-card { transform: translateX(16px);  }
+
+.timeline-year {
+    display: inline-block;
+    background: rgba(0, 123, 255, 0.15);
+    color: #5aadff;
+    border: 1px solid rgba(0, 123, 255, 0.4);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    padding: 3px 11px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.timeline-card h3 {
+    color: #ffffff;
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.timeline-card p {
+    color: rgba(255, 255, 255, 0.58);
+    font-size: 14px;
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* ---- Active state (added by JS) ---- */
+.timeline-item.is-active .timeline-node {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.timeline-item.is-active .timeline-branch {
+    transform: scaleX(1);
+}
+
+.timeline-item.is-active .timeline-card {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* ---- Mobile: single column ---- */
+@media (max-width: 680px) {
+    /* Move spine to a fixed left gutter */
+    .timeline::before {
+        left: 20px;
+        transform: none;
+    }
+
+    .timeline-spine-track {
+        left: 20px;
+        transform: none;
+    }
+
+    /* All items stack on the right of the spine */
+    .timeline-item,
+    .timeline-item.tl-right {
+        width: auto;
+        left: 0;
+        margin-left: 76px; /* 20px spine + 56px branch */
+    }
+
+    /* Node: centre at spine (20px from timeline left = 76-56 from item left) */
+    .tl-left .timeline-node,
+    .tl-right .timeline-node {
+        left: auto;
+        right: auto;
+        left: -63px; /* -(56 + 7) = item-left − 63 → node centre at item-left − 56 = 20px ✓ */
+    }
+
+    /* Branch: extends left from item to spine */
+    .tl-left .timeline-branch,
+    .tl-right .timeline-branch {
+        left: auto;
+        right: 100%;
+        background: linear-gradient(to right, #007bff, #44bcd1);
+        transform-origin: left;
+    }
+
+    /* About hero */
+    .about-hero {
+        min-height: 70vh;
+        align-items: flex-end;
+    }
+
+    .about-hero-content {
+        padding: 0 20px 52px;
+    }
+
+    /* About intro */
+    .about-intro-pillars {
+        grid-template-columns: 1fr;
+    }
+
+    .about-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 680px) {
     .industries-hero-content {
         padding: 22px;
     }

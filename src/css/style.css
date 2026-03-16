@@ -28,6 +28,7 @@ body {
     background-color: #17283d;
     color: var(--text-color);
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 /* ==================== */
