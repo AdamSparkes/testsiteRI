@@ -480,6 +480,37 @@
     background-image: url('../images/STTHero.png');
 }
 
+/* Small Target Surveillance uses the same minimal, non-boxed layout style. */
+.small-target-surveillance-page .product-section,
+.small-target-surveillance-page .feature-card,
+.small-target-surveillance-page .story-copy {
+    border: none;
+    background: transparent;
+    box-shadow: none;
+}
+
+.small-target-surveillance-page .product-section {
+    padding: 18px 0;
+}
+
+.small-target-surveillance-page .feature-card,
+.small-target-surveillance-page .story-copy {
+    padding: 0;
+}
+
+.small-target-surveillance-page .story-media,
+.small-target-surveillance-page .product-image-break,
+.small-target-surveillance-page .video-frame-wrap {
+    border: none;
+    background: transparent;
+}
+
+.small-target-surveillance-page .product-feature-grid,
+.small-target-surveillance-page .product-feature-grid-wide,
+.small-target-surveillance-page .product-split {
+    gap: 20px;
+}
+
 /* Wave Signal uses the same minimal, non-boxed layout style. */
 .wave-signal-page .product-section,
 .wave-signal-page .feature-card,
