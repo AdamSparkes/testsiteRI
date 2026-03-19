@@ -45,7 +45,8 @@
 (function () {
     const timeline = document.getElementById("about-timeline");
     const spine = document.getElementById("timeline-spine");
-    if (!timeline || !spine) return;
+    const spineTrack = timeline ? timeline.querySelector(".timeline-spine-track") : null;
+    if (!timeline || !spine || !spineTrack) return;
 
     const items = Array.from(timeline.querySelectorAll(".timeline-item"));
 
@@ -59,21 +60,22 @@
     function update() {
         const tlRect = timeline.getBoundingClientRect();
         const viewH  = window.innerHeight;
-        const tlH    = timeline.offsetHeight;
+        const trackTop = spineTrack.offsetTop;
+        const trackH   = spineTrack.offsetHeight;
 
         // Anchor the spine tip to 70% down the viewport.
         // drawnPx = 0 when that anchor first touches the timeline top,
         // and grows to tlH as the anchor sweeps through the full timeline.
         // This means the glowing tip is always visible on screen while scrolling.
         const anchorY = viewH * 0.7;
-        const drawnPx = Math.max(0, Math.min(tlH, anchorY - tlRect.top));
+        const drawnPx = Math.max(0, Math.min(trackH, anchorY - tlRect.top - trackTop));
         spine.style.height = drawnPx + "px";
 
         // Items activate when the spine tip reaches their node.
         items.forEach((item) => {
             if (item.classList.contains("is-active")) return;
             const nodeTop = item.offsetTop + 22;
-            if (drawnPx >= nodeTop) {
+            if (drawnPx >= nodeTop - trackTop) {
                 item.classList.add("is-active");
             }
         });
